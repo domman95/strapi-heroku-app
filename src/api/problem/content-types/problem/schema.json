@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "problems",
+  "info": {
+    "singularName": "problem",
+    "pluralName": "problems",
+    "displayName": "Problems",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "problemDescription": {
+      "type": "richtext"
+    },
+    "developer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::developer.developer",
+      "inversedBy": "problems"
+    },
+    "Solved": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
